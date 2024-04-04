@@ -1,4 +1,4 @@
-# FULL_ADDER_SUBTRACTOR
+
 
 Implementation-of-Full-Adder-and-Full-subtractor-circuit
 
@@ -38,18 +38,86 @@ Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
 
+**Half subtractor**
+
+![Screenshot 2024-04-04 134739](https://github.com/DaisyRavi/FULL_ADDER_SUBTRACTOR/assets/151394386/8c7755bc-16f9-4415-b8ea-eb4e756b835a)
+
+
+**Full subtractor**
+
+![Screenshot 2024-04-04 134801](https://github.com/DaisyRavi/FULL_ADDER_SUBTRACTOR/assets/151394386/0cb89035-02a3-41a9-811c-0470dcf7ec04)
+
 **Procedure**
 
 Write the detailed procedure here
+*Create a new Quartus project:* Launch Quartus Prime software and create a new project. Provide a name for your project and specify the location where you want to save it.
+
+*Design Entry:* In the Quartus software, go to File > New > Project Wizard. Follow the wizard to specify the target device family, device, and any other relevant settings.
+
+*Create a schematic:* In Quartus, you can create a schematic using the built-in schematic editor. You'll need to design a circuit that includes full adders and logic gates to handle subtraction. Alternatively, you can write Verilog or VHDL code for your full adder/subtractor.
+
+*Write Verilog or VHDL code:* Open a new file in Quartus and write the Verilog or VHDL code for your full adder/subtractor.
+
+*Compile the design:* After designing your circuit or writing the Verilog/VHDL code, compile your design by clicking on Processing > Start Compilation.
+
+*Simulate your design:* You can simulate your design using ModelSim, which is included with Quartus. This helps you verify that your design functions correctly.
+
+*Program your FPGA:* Once your design is successfully compiled and simulated, you can program your FPGA using the Programmer tool in Quartus.
+
+*Test your design:* After programming the FPGA, you can test your full adder/subtractor to ensure it behaves as expected.
 
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. 
+
+Developed by: Daisy R
+
+RegisterNumber: 212223220018
 */
+
+**Half subtractor**
+```
+module fs(df,bo,a,b);
+output df,bo;
+input a,b;
+assign df=a^b;
+assign bo=(~a&b);
+endmodule 
+```
+
+**Full subtractor**
+```
+module fs(df,bo,a,b,bin);
+output df,bo;
+input a,b,bin;
+wire w1,w2,w3;
+assign w1=a^b;
+assign w2=(~a&b);
+assign w3=(~w1&bin);
+assign df=w1^bin;
+assign bo=w2|w3;
+endmodule
+```
 
 **RTL Schematic**
 
+**Half subtractor**
+
+![Screenshot 2024-04-04 134150](https://github.com/DaisyRavi/FULL_ADDER_SUBTRACTOR/assets/151394386/c8cde523-6576-4877-b887-5f1cee62dc37)
+
+**Full subtractor**
+
+![Screenshot 2024-04-04 132642](https://github.com/DaisyRavi/FULL_ADDER_SUBTRACTOR/assets/151394386/7cdfa1d5-1130-4130-8576-bd9daf323547)
+
 **Output Timing Waveform**
+
+**Half subtractor**
+
+![Screenshot 2024-04-04 134440](https://github.com/DaisyRavi/FULL_ADDER_SUBTRACTOR/assets/151394386/dcdfabae-2114-44c2-8feb-69558b3d3881)
+
+**Full subtractor**
+
+![Screenshot 2024-04-04 132551](https://github.com/DaisyRavi/FULL_ADDER_SUBTRACTOR/assets/151394386/6354cd55-8ddd-47e0-b79c-7b98611228db)
 
 **Result:**
 
