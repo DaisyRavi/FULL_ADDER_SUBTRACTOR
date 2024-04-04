@@ -38,9 +38,10 @@ Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
 
-**Half subtractor**
+**Full Adder**
+![full-adder2](https://github.com/DaisyRavi/FULL_ADDER_SUBTRACTOR/assets/151394386/cff687c3-db54-4c5d-b578-077a812cb18e)
 
-![Screenshot 2024-04-04 134739](https://github.com/DaisyRavi/FULL_ADDER_SUBTRACTOR/assets/151394386/8c7755bc-16f9-4415-b8ea-eb4e756b835a)
+
 
 
 **Full subtractor**
@@ -75,35 +76,20 @@ Developed by: Daisy R
 RegisterNumber: 212223220018
 */
 
-**Half subtractor**
-```
-module fs(df,bo,a,b);
-output df,bo;
-input a,b;
-assign df=a^b;
-assign bo=(~a&b);
-endmodule 
-```
+**Full Adder**
+
+![Screenshot 2024-04-04 195614](https://github.com/DaisyRavi/FULL_ADDER_SUBTRACTOR/assets/151394386/86b3a702-c2da-4031-8d09-d3daab0f3b1d)
 
 **Full subtractor**
-```
-module fs(df,bo,a,b,bin);
-output df,bo;
-input a,b,bin;
-wire w1,w2,w3;
-assign w1=a^b;
-assign w2=(~a&b);
-assign w3=(~w1&bin);
-assign df=w1^bin;
-assign bo=w2|w3;
-endmodule
-```
+![Screenshot 2024-04-04 194743](https://github.com/DaisyRavi/FULL_ADDER_SUBTRACTOR/assets/151394386/400826bd-2579-4931-8c64-511e39c1b3bc)
+
 
 **RTL Schematic**
 
-**Half subtractor**
+**Full Adder**
 
-![Screenshot 2024-04-04 134150](https://github.com/DaisyRavi/FULL_ADDER_SUBTRACTOR/assets/151394386/c8cde523-6576-4877-b887-5f1cee62dc37)
+![Screenshot 2024-04-04 195631](https://github.com/DaisyRavi/FULL_ADDER_SUBTRACTOR/assets/151394386/a5e7fdf1-6bdd-443d-b43c-f7914db5399e)
+
 
 **Full subtractor**
 
@@ -111,9 +97,10 @@ endmodule
 
 **Output Timing Waveform**
 
-**Half subtractor**
+**Full Adder**
+![Screenshot 2024-04-04 195847](https://github.com/DaisyRavi/FULL_ADDER_SUBTRACTOR/assets/151394386/f94a7966-c3c3-4ea2-929d-3ff41d3c3a24)
 
-![Screenshot 2024-04-04 134440](https://github.com/DaisyRavi/FULL_ADDER_SUBTRACTOR/assets/151394386/dcdfabae-2114-44c2-8feb-69558b3d3881)
+
 
 **Full subtractor**
 
