@@ -81,6 +81,7 @@ RegisterNumber: 212223220018
 ![Screenshot 2024-04-04 195614](https://github.com/DaisyRavi/FULL_ADDER_SUBTRACTOR/assets/151394386/86b3a702-c2da-4031-8d09-d3daab0f3b1d)
 
 **Full subtractor**
+
 ![Screenshot 2024-04-04 194743](https://github.com/DaisyRavi/FULL_ADDER_SUBTRACTOR/assets/151394386/400826bd-2579-4931-8c64-511e39c1b3bc)
 
 
